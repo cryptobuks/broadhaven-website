@@ -4,10 +4,10 @@ import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles(theme => ({
   link: {
-    textDecoration: "none",
+    textDecoration: "underline",
+    color: theme.palette.primary.dark,
     "&:hover": {
-      textDecoration: "underline",
-      color: theme.palette.primary.dark
+      textDecoration: "none"
     }
   }
 }))

@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     paddingRight: theme.spacing.unit,
     paddingLeft: theme.spacing.unit,
-    height: "10px",
+    height: "12px",
     color: theme.palette.common.black
   }
 }))

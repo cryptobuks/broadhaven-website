@@ -17,8 +17,14 @@ export default createMuiTheme({
       main: "#F84A4B"
     },
     secondary: {
-      main: "#707C87"
+      main: "#C8F4F9"
+    },
+    background: {
+      default: "#707C87"
     }
+  },
+  shape: {
+    borderRadius: 10
   },
   typography: {
     useNextVariants: true

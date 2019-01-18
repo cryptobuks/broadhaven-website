@@ -1,12 +1,10 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
-import { Paper, Typography, Button, Collapse, Fade } from "@material-ui/core"
+import { useState } from "react"
 import { makeStyles } from "@material-ui/styles"
+import { Typography, Button, Collapse, Paper } from "@material-ui/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Logo from "../common/logo"
 import Items from "./menu/items"
-
-const styles: React.CSSProperties = {}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,23 +16,25 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     maxWidth: "1080px",
     background: "white",
-    borderBottom: "4px solid",
-    borderBottomColor: theme.palette.primary.main
+    borderBottom: "2px solid",
+    borderBottomColor: theme.palette.primary.dark
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
+    padding: theme.spacing.unit
   },
   items: {
-    textAlign: "right"
+    textAlign: "right",
+    padding: theme.spacing.unit
   }
 }))
 
-const Menu = () => {
-  const classes = useStyles({})
+const Menu: React.FunctionComponent = () => {
   const [showItems, setShowItems] = useState(false)
+  const classes = useStyles({})
 
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root} square elevation={8}>
       <div className={classes.grow}>
         <Typography variant="h6">
           <Logo />
@@ -43,13 +43,13 @@ const Menu = () => {
       </div>
       <div className={classes.items}>
         <Button onClick={() => setShowItems(!showItems)}>
-          <FontAwesomeIcon icon={showItems ? "times" : "bars"} />
+          <FontAwesomeIcon icon={showItems ? "times" : "bars"} size="lg" />
         </Button>
         <Collapse in={showItems}>
           <Items hideItems={() => setShowItems(false)} />
         </Collapse>
       </div>
-    </div>
+    </Paper>
   )
 }
 

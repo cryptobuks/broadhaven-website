@@ -3,20 +3,26 @@ import Card from "./cards/card"
 
 export default [
   <Card icon="hands-helping" title="Blockchain consulting">
-    We are ready to help your business understand the impact blockchain may have on your industry. This may
-    include competitor analysis, market research, and an exploration of how blockchain technologies enhance
-    your business.
+    We simplify the complexity of blockchain to demonstrate its relevance to your business, partners, and
+    customers. By reducing blockchain to its fundamentals –within the context of your business and industry–
+    we will help you realise a competitive edge.
   </Card>,
-  <Card icon="lightbulb" title="Prototypes and Proofs of Concept">
-    We here to help you understand blockchain architectures and technologies, and to support the design and
-    development of your decentralised applications with a working prototype or proof of concept.
+  <Card icon="lightbulb" title="Proofs of Concept">
+    Building a blockchain proof of concept verifies an approach and demonstrates technical feasibility. We
+    provide hands-on support to business to help them accelerate the integration of blockchain into their
+    business.
   </Card>,
-  <Card icon="university" title="Training and Education">
-    From basic introductions, to education for your business leaders, or a deep dive into the programming
-    blockchain applications, we can assist with every element of your training and education plan.
+  <Card icon="university" title="Blockchain Education">
+    From its cypherpunk origins to zero-knowledge proofs, we can help business leaders and their teams
+    understand where blockchain came from and where it’s going.
+  </Card>,
+  <Card icon="graduation-cap" title="Blockchain Training">
+    We train software engineers to build on Ethereum, or integrate payments with Bitcoin. We will help short
+    circuit the time it takes to become a competent blockchain engineer to save you time and money.
   </Card>,
   <Card icon="shield-alt" title="Cybersecurity consulting">
-    Cybersecurity can feel daunting and overwhelming. It shouldn't. We are here to cut through the noise and
-    help your business secure itself in cyberspace.
+    We have a background in cybersecurity and can help businesses work with this bleeding edge technology
+    securely and address common attack vectors in blockchain systems. We will show you how to employ low to no
+    cost solutions to address threats to your business.
   </Card>
 ]

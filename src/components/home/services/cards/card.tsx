@@ -6,11 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
-    height: "300px"
+    height: "100%",
+    padding: theme.spacing.unit * 2
   },
   icon: {
-    color: theme.palette.primary.dark,
-    padding: theme.spacing.unit * 3,
+    color: theme.palette.primary.main,
+    padding: theme.spacing.unit * 2,
     textAlign: "center"
   }
 }))

@@ -30,6 +30,10 @@ const Team = (props: IProps) => {
       <Grid container justify="center" alignItems="flex-start" spacing={16}>
         <Grid item xs={12}>
           <SectionTitle anchor={anchor} text="About Us" />
+          <Typography variant="h6">
+            We formed Broadhaven to bring expertise, discipline, and execution to partners looking to explore
+            and capitalise on the potential of blockchain.
+          </Typography>
         </Grid>
         <Grid item xs={12} md={5}>
           <Alasdair />

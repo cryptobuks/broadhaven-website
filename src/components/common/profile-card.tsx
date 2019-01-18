@@ -44,8 +44,10 @@ const ProfileCard = (props: IProps) => {
           {role}
         </Typography>
         <Collapse in={expand} collapsedHeight="150px" timeout="auto">
-          {profile.map(para => (
-            <Typography gutterBottom>{para}</Typography>
+          {profile.map((para, key) => (
+            <Typography key={key} gutterBottom>
+              {para}
+            </Typography>
           ))}
           {qualifications.length > 0 && (
             <>
