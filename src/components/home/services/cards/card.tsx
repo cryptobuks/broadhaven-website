@@ -27,7 +27,7 @@ const Card = (props: IProps) => {
   const classes = useStyles({})
 
   return (
-    <MuiCard className={classes.root}>
+    <MuiCard className={classes.root} raised elevation={8}>
       <CardContent>
         <div className={classes.icon}>
           <FontAwesomeIcon icon={icon} size="4x" />
