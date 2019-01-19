@@ -5,9 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
-    height: "100%",
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing.unit * 2,
+    boxShadow: "none"
   },
   icon: {
     color: theme.palette.primary.main,
@@ -27,7 +26,7 @@ const Card = (props: IProps) => {
   const classes = useStyles({})
 
   return (
-    <MuiCard className={classes.root} raised elevation={8}>
+    <MuiCard className={classes.root}>
       <CardContent>
         <div className={classes.icon}>
           <FontAwesomeIcon icon={icon} size="4x" />

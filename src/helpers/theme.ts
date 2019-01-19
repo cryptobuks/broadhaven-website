@@ -4,7 +4,7 @@ import { configureAnchors } from "react-scrollable-anchor"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 
-configureAnchors({ offset: -70, scrollDuration: 500 })
+configureAnchors({ offset: -130, scrollDuration: 500 })
 
 library.add(fab, fas)
 

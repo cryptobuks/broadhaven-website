@@ -3,23 +3,27 @@ import { useState } from "react"
 import { makeStyles } from "@material-ui/styles"
 import { Grid, Paper, Button } from "@material-ui/core"
 import SwipeableViews from "react-swipeable-views"
+import { autoPlay } from "react-swipeable-views-utils"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SectionTitle from "../common/seciton-title"
 import cards from "./services/cards"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing.unit * 4,
-    textAlign: "center"
+    padding: theme.spacing.unit * 4
   },
   content: {
-    margin: "auto auto"
+    margin: "auto auto",
+    maxWidth: "600px"
   },
   flex: {
     display: "flex"
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
+    textAlign: "left"
   }
 }))
 interface IProps {
@@ -30,7 +34,22 @@ interface IProps {
 const Services = (props: IProps) => {
   const { anchor, nextAnchor } = props
   const [step, setStep] = useState(0)
+  const [autoPlay, setAutoPlay] = useState(true)
   const classes = useStyles({})
+
+  const handleAutoPlayNext = () => {
+    step + 1 === cards.length ? setStep(0) : setStep(step + 1)
+  }
+
+  const back = () => {
+    autoPlay && setAutoPlay(false)
+    setStep(step - 1)
+  }
+
+  const next = () => {
+    autoPlay && setAutoPlay(false)
+    setStep(step + 1)
+  }
 
   return (
     <Paper className={classes.root}>
@@ -38,19 +57,27 @@ const Services = (props: IProps) => {
       <div className={classes.content}>
         <Grid container justify="center">
           <Grid item xs={12}>
-            <SwipeableViews index={step}>{cards}</SwipeableViews>
+            <AutoPlaySwipeableViews
+              autoplay={autoPlay}
+              index={step}
+              onChangeIndex={handleAutoPlayNext}
+              enableMouseEvents
+            >
+              {cards}
+            </AutoPlaySwipeableViews>
           </Grid>
           <Grid item xs={12}>
             <div className={classes.flex}>
               <div className={classes.grow}>
-                <Button variant="raised" onClick={() => setStep(step - 1)} disabled={step === 0}>
+                <Button variant="contained" color="primary" onClick={back} disabled={step === 0}>
                   <FontAwesomeIcon icon="angle-left" />
                 </Button>
               </div>
               <div>
                 <Button
-                  variant="raised"
-                  onClick={() => setStep(step + 1)}
+                  variant="contained"
+                  color="primary"
+                  onClick={next}
                   disabled={step + 1 === cards.length}
                 >
                   <FontAwesomeIcon icon="angle-right" />

@@ -11,7 +11,7 @@ const SectionTitle = (props: IProps) => {
   const { anchor, text } = props
   return (
     <ScrollableAnchor id={anchor}>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" align="center" gutterBottom>
         {text}
       </Typography>
     </ScrollableAnchor>

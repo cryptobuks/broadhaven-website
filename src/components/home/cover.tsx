@@ -1,8 +1,7 @@
 import * as React from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Typography, Grid, Button, Paper } from "@material-ui/core"
-import SectionTitle from "../common/seciton-title"
-import NextSectionArrow from "../common/next-section-arrow"
+import { Typography, Grid, Paper } from "@material-ui/core"
+import ScrollableAnchor from "react-scrollable-anchor"
 import LogoAnimation from "../common/logo-animation"
 
 const useStyles = makeStyles(theme => ({
@@ -44,9 +43,11 @@ const Cover = (props: IProps) => {
         </Grid>
         <Grid item xs={12} md={6} className={classes.paddingTop}>
           <Grid item>
-            <Typography variant="h3" gutterBottom>
-              Welcome,
-            </Typography>
+            <ScrollableAnchor id="cover">
+              <Typography variant="h3" gutterBottom>
+                Welcome,
+              </Typography>
+            </ScrollableAnchor>
             <Typography gutterBottom variant="body1">
               Blockchain is changing the way information and value are exchanged; and it has the potential to
               transform how we organise our societies.

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Typography, Button, Paper } from "@material-ui/core"
+import { Typography, Button } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,26 +18,26 @@ const useStyles = makeStyles(theme => ({
 
 interface IProps {}
 
-const RegisterForWebinar = (props: IProps) => {
+const FindOutMore = (props: IProps) => {
   const classes = useStyles({})
 
   const email = "hi@broadhaven.tech"
-  const subject = "Webinar Registration Inquiry"
-  const body = "I'm interested in attending your next webinar. Please send me the details."
-  const registerHref = `mailto:${email}?subject=${subject}&body=${body}`
+  const subject = "Services Inquiry"
+  const body = "Can you tell me more about your services?"
+  const getInTouch = `mailto:${email}?subject=${subject}&body=${body}`
 
   return (
     <div className={classes.root}>
       <Typography gutterBottom variant="h5" className={classes.white}>
-        Interested in attending our free Blockchain 101 webinar?
+        Want to know more?
       </Typography>{" "}
-      <a href={registerHref} className={classes.href}>
+      <a href={getInTouch} className={classes.href}>
         <Button variant="contained" color="secondary">
-          Register Here
+          Get In Touch
         </Button>
       </a>
     </div>
   )
 }
 
-export default RegisterForWebinar
+export default FindOutMore

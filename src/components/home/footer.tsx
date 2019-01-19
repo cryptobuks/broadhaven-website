@@ -33,7 +33,8 @@ const Footer = () => {
             href="https://www.youtube.com/channel/UC_kyKfCEE67GEOSb2oat7bA"
             icon={["fab", "youtube"]}
           />
-          <Method order={6} href="https://instagram.com/" icon={["fab", "instagram"]} />
+          {/* <Method order={6} href="https://instagram.com/" icon={["fab", "instagram"]} /> */}
+          <Method order={6} href="https://audioboom.com" icon="podcast" />
         </Grid>
       </Grid>
     </div>

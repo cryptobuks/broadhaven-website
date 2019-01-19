@@ -8,6 +8,7 @@ import Experience from "./home/experience"
 import Team from "./home/team"
 import Footer from "./home/footer"
 import RegisterForWebinar from "./home/register-for-webinar"
+import FindOutMore from "./home/find-out-more"
 import SectionDivider from "./home/section-divider"
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -43,7 +44,13 @@ const Home: React.FunctionComponent<IProps> = props => {
           <Services anchor="services" nextAnchor="#experience" />
         </Grid>
         <Grid item xs={12}>
+          <FindOutMore />
+        </Grid>
+        <Grid item xs={12}>
           <Experience anchor="experience" nextAnchor="#team" />
+        </Grid>
+        <Grid item xs={12}>
+          <SectionDivider />
         </Grid>
         <Grid item xs={12}>
           <Team anchor="team" />

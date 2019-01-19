@@ -1,17 +1,12 @@
 import * as React from "react"
-import { Grid } from "@material-ui/core"
+import { Grid, Paper } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import Item from "./experience/item"
-import NextSectionArrow from "../common/next-section-arrow"
 import SectionTitle from "../common/seciton-title"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "100vh",
-    padding: theme.spacing.unit * 2,
-    [theme.breakpoints.down("xs")]: {
-      height: "100%"
-    }
+    padding: theme.spacing.unit * 4
   }
 }))
 
@@ -40,7 +35,7 @@ const Experience = (props: IProps) => {
   const classes = useStyles({})
 
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root}>
       <Grid container justify="center" spacing={16}>
         <Grid item xs={12}>
           <SectionTitle anchor={anchor} text="Our Experience" />
@@ -59,8 +54,7 @@ const Experience = (props: IProps) => {
           <Item icon="solar-panel" title="Renewable Energy and Carbon Trading" description={renewables} />
         </Grid>
       </Grid>
-      <NextSectionArrow anchor={nextAnchor} />
-    </div>
+    </Paper>
   )
 }
 
