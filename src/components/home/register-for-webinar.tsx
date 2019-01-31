@@ -29,7 +29,7 @@ const RegisterForWebinar = (props: IProps) => {
   return (
     <div className={classes.root}>
       <Typography gutterBottom variant="h5" className={classes.white}>
-        Interested in attending our free Blockchain 101 webinar?
+        Interested in attending our free Blockchain for Business webinar?
       </Typography>{" "}
       <a href={registerHref} className={classes.href}>
         <Button variant="contained" color="secondary">
