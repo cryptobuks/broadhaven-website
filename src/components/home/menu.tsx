@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "flex-start",
     padding: theme.spacing.unit,
     width: "100%",
-    maxWidth: "1080px",
+    maxWidth: "800px",
     background: "white",
     borderBottom: "2px solid",
     borderBottomColor: theme.palette.primary.dark

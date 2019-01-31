@@ -1,16 +1,21 @@
 import * as React from "react"
 import { useState } from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Card, CardContent, CardActions, Button, Typography, Collapse, CardMedia } from "@material-ui/core"
+import { Avatar, Grid, Card, CardContent, CardActions, Button, Typography, Collapse } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
-    maxWidth: "350px"
+    maxWidth: "350px",
+    margin: "auto auto",
+    marginBottom: theme.spacing.unit * 2
   },
   nominals: {
     display: "inline",
     paddingLeft: theme.spacing.unit
+  },
+  photo: {
+    height: 200,
+    width: 170
   }
 }))
 
@@ -30,8 +35,10 @@ const ProfileCard = (props: IProps) => {
 
   return (
     <Card className={classes.root}>
-      <CardMedia component="img" image={photo} />
       <CardContent>
+        <Grid container justify="center">
+          <Avatar src={photo} className={classes.photo} />
+        </Grid>
         <Typography variant="h6" gutterBottom>
           {title}
           {nominals && (

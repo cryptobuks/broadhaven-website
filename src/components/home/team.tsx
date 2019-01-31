@@ -22,7 +22,7 @@ const Team = (props: IProps) => {
 
   return (
     <Paper className={classes.root}>
-      <Grid container justify="center" alignItems="flex-start" spacing={16}>
+      <Grid container justify="center">
         <Grid item xs={12}>
           <SectionTitle anchor={anchor} text="About Us" />
           <Typography variant="body2" gutterBottom>
@@ -30,13 +30,13 @@ const Team = (props: IProps) => {
             and capitalise on the potential of blockchain.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={6}>
           <Alasdair />
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={6}>
           <Tim />
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={6}>
           <Steve />
         </Grid>
       </Grid>

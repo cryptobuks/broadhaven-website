@@ -1,5 +1,5 @@
 import * as React from "react"
-import ProfileCard from "../../common/profile-card"
+import ProfileCard from "./profile-card"
 
 const profile = [
   "Tim is a cybersecurity and blockchain specialist. He has over 12 years of leadership and technical experience in the Canadian and UK Armies, and in private industry.",
@@ -15,7 +15,7 @@ const qualifications = [
 
 const Tim = () => (
   <ProfileCard
-    photo="profile-tim.jpg"
+    photo="images/profile-tim.jpg"
     title="Tim Holmes-Mitra"
     role="CTO"
     nominals="MBE, MSc, CISSP"

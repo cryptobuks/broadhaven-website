@@ -10,9 +10,6 @@ library.add(fab, fas)
 
 export default createMuiTheme({
   palette: {
-    common: {
-      black: "#252221"
-    },
     primary: {
       main: "#F84A4B"
     },

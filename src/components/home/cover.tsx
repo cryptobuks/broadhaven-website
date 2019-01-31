@@ -41,7 +41,7 @@ const Cover = (props: IProps) => {
         <Grid item xs={12} md={4} className={classes.center}>
           <LogoAnimation />
         </Grid>
-        <Grid item xs={12} md={6} className={classes.paddingTop}>
+        <Grid item xs={12} className={classes.paddingTop}>
           <Grid item>
             <ScrollableAnchor id="cover">
               <Typography variant="h3" gutterBottom>

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     bottom: "0px",
     width: "100%",
-    maxWidth: "1080px",
+    maxWidth: "800px",
     textAlign: "center",
     borderTop: `4px solid ${theme.palette.primary.dark}`,
     background: theme.palette.background.paper
@@ -34,7 +34,7 @@ const Footer = () => {
             icon={["fab", "youtube"]}
           />
           {/* <Method order={6} href="https://instagram.com/" icon={["fab", "instagram"]} /> */}
-          <Method order={6} href="https://audioboom.com" icon="podcast" />
+          <Method order={6} href="https://audioboom.com/channels/4985829" icon="podcast" />
         </Grid>
       </Grid>
     </div>

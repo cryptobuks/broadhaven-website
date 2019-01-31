@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.primary.dark
   },
   pulse: {
-    animation: "pulse 2s 5",
-    animationDelay: "10s",
+    animation: "pulse 3s infinite",
+    animationDelay: "5s",
     "&:hover": {
       animation: "none"
     }

@@ -5,7 +5,7 @@ import { Grid, Paper, Button } from "@material-ui/core"
 import SwipeableViews from "react-swipeable-views"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SectionTitle from "../common/seciton-title"
-import cards from "./services/cards"
+import cases from "./case-studies/cases"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,14 +29,14 @@ interface IProps {
   anchor: string
 }
 
-const Services = (props: IProps) => {
+const CaseStudies = (props: IProps) => {
   const { anchor, nextAnchor } = props
   const [step, setStep] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)
   const classes = useStyles({})
 
   const handleAutoPlayNext = () => {
-    step + 1 === cards.length ? setStep(0) : setStep(step + 1)
+    step + 1 === cases.length ? setStep(0) : setStep(step + 1)
   }
 
   const back = () => {
@@ -51,12 +51,12 @@ const Services = (props: IProps) => {
 
   return (
     <Paper className={classes.root}>
-      <SectionTitle anchor={anchor} text="Our Services" />
+      <SectionTitle anchor={anchor} text="Case Studies" />
       <div className={classes.content}>
         <Grid container justify="center">
           <Grid item xs={12} md={8}>
             <SwipeableViews index={step} onChangeIndex={handleAutoPlayNext} enableMouseEvents>
-              {cards}
+              {cases}
             </SwipeableViews>
           </Grid>
           <Grid item xs={12} md={8}>
@@ -71,7 +71,7 @@ const Services = (props: IProps) => {
                   variant="contained"
                   color="primary"
                   onClick={next}
-                  disabled={step + 1 === cards.length}
+                  disabled={step + 1 === cases.length}
                 >
                   <FontAwesomeIcon icon="angle-right" />
                 </Button>
@@ -84,4 +84,4 @@ const Services = (props: IProps) => {
   )
 }
 
-export default Services
+export default CaseStudies

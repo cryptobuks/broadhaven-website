@@ -1,5 +1,5 @@
 import * as React from "react"
-import ProfileCard from "../../common/profile-card"
+import ProfileCard from "./profile-card"
 
 const profile: string[] = [
   "Steve is a highly experienced digital technology consultant, with a wealth of business, sales and technology expertise in Networking, Communications, Software and Cybersecurity, having successfully engaged with business partners and direct clients, locally and globally.",
@@ -12,7 +12,7 @@ const qualifications: string[] = []
 
 const Steve = () => (
   <ProfileCard
-    photo="profile-steve.jpg"
+    photo="images/profile-steve.jpg"
     title="Steve Frost"
     role="Business Development"
     profile={profile}

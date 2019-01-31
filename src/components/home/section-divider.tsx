@@ -1,18 +1,33 @@
 import * as React from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Theme } from "@material-ui/core"
+import { Theme, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: "100%",
-    height: "400px"
+    textAlign: "center",
+    marginTop: theme.spacing.unit * 20,
+    marginBottom: theme.spacing.unit * 20
+  },
+  white: {
+    color: "white"
   }
 }))
 
-const SectonDivider = () => {
-  const classes = useStyles({})
+interface IProps {
+  text?: string
+}
 
-  return <div className={classes.root} />
+const SectonDivider: React.FunctionComponent<IProps> = props => {
+  const classes = useStyles({})
+  const { text } = props
+
+  return (
+    <div className={classes.root}>
+      <Typography variant="h5" className={classes.white}>
+        {text}
+      </Typography>
+    </div>
+  )
 }
 
 export default SectonDivider
