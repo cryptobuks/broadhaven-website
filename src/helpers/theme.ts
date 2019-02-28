@@ -8,24 +8,24 @@ configureAnchors({ offset: -130, scrollDuration: 500 })
 
 library.add(fab, fas)
 
-export default createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#F84A4B"
+      main: "#F84A4B",
     },
     secondary: {
-      main: "#C8F4F9"
+      main: "#C8F4F9",
     },
     background: {
-      default: "#707C87"
-    }
+      default: "#707C87",
+    },
   },
   shape: {
-    borderRadius: 10
+    borderRadius: 10,
   },
   typography: {
-    useNextVariants: true
-  }
+    useNextVariants: true,
+  },
 })
 
 // #F84A4B

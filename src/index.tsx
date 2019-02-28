@@ -1,14 +1,12 @@
 import "./helpers/styles-bootstrap"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import { MuiThemeProvider, CssBaseline } from "@material-ui/core"
-import Home from "./components/home"
-import theme from "./helpers/theme"
+import { App } from "./app"
 
-ReactDOM.render(
-  <MuiThemeProvider theme={theme}>
-    <CssBaseline />
-    <Home />
-  </MuiThemeProvider>,
-  document.getElementById("root")
-)
+ReactDOM.render(<App />, document.getElementById("root"))
+
+if (process.env.NODE_ENV !== "production" && module.hot) {
+  module.hot.accept("./app", () => {
+    ReactDOM.render(<App />, document.getElementById("root"))
+  })
+}
